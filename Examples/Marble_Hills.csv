@@ -1,0 +1,23 @@
+1 name: Sample name without spaces or symbols.,2 lat: latitude used to calculate the muon contributions (DD).,3 site_elv: elevation of the sample above sea level (m).,4 Isotope (used to calculate the muon contributions ),5 base_level: elevation of the fluvial or glacial altitude at the site area (m). In case of fluvial sediments this is the current altitude of the river. In case of nunatak samples this is the current elevation of the glacier at the sampling site. This is used to calculate river incision or ice thinning.,6 Apparent_years: Apparent age (a).,7 dApparent_years: External uncertainty of the apparent age (a). This uncertainty should represent both the analytical uncertainty and the uncertainty of the surface production rate (mostly spallation).
+MH12-30B,-80.2630890067666,1381.3,36,809.3,640000,120000
+MH12-30A,-80.2630890067666,1381.3,36,809.3,840000,210000
+MH12-31,-80.2630890067666,1381.3,36,809.3,670000,130000
+MH12-32,-80.2630890067666,1381.3,36,809.3,790000,180000
+MH12-68,-80.305756079033,1680.7,36,675.7,600000,110000
+MH12-75,-80.2737144101411,1162.8,36,762.8,481000,72000
+MH14-13,-80.2642,1342.6,36,808.6,490000,80000
+MH14-15,-80.26105,1102.2,36,842.2,208000,24000
+MH14-21,-80.28305,746.5,36,612.5,53000,5100
+MH14-31,-80.26735,1273.1,36,809.1,600000,100000
+MH14-37,-80.2794,809.2,36,766.2,7260,590
+MH12-C1-TO,-80.26334281,1392.6,36,808.6,650000,140000
+MH14-38,-80.29905,826,36,675,66900,6400
+MH12-30,-80.2630890067666,1381.3,36,809.3,890000,240000
+MH12-31Qual,-80.2630890067666,1381.3,36,809.3,640000,110000
+MH12-32Qual,-80.2630890067666,1381.3,36,809.3,930000,280000
+MH12-69,-80.3057550732046,1680.5,36,676.5,670000,130000
+MH12-70,-80.3057545702904,1680.5,36,676.5,680000,130000
+MH12-74,-80.2737399749457,1164.3,36,763.3,410000,60000
+MH12-75Qual,-80.2737144101411,1162.8,36,762.8,517000,79000
+
+
