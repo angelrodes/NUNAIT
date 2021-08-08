@@ -122,9 +122,23 @@ agescaling=1;
 x=climatecurves.age/agescaling;
 % rerpesent the elevation respect the current average ice surface in the area
 base=mean(unique(samples.base_level)); 
-y1=base+results.DELTAH(1)+(climatecurves.d18O-climatecurves.d18O(1))/results.D18z(3);
-y2=base+results.DELTAH(2)+(climatecurves.d18O-climatecurves.d18O(1))/results.D18z(2);
-y3=base+results.DELTAH(3)+(climatecurves.d18O-climatecurves.d18O(1))/results.D18z(1);
+y2=base+results.DELTAH(2)+(climatecurves.d18O-climatecurves.d18O(1))/results.D18z(2); % best
+% find min and max curves
+y1=y2; % min curve
+y3=y2; % max curve
+h = waitbar(0,'Calculating glacial surface...');
+disp('Calculating glacial surface...')
+tic
+for n=find(onesigma)'
+    if mod(n,10)==0
+        waitbar(n/sum(onesigma),h);
+    end
+    yi=base+DELTAH(n)+(climatecurves.d18O-climatecurves.d18O(1))/D18z(n);
+    y1=min(y1,yi);
+    y3=max(y3,yi);
+end
+toc
+close(h)
 
 % plot uncert
 for beta=linspace(0,1,100)
