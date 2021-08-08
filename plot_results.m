@@ -157,29 +157,11 @@ end
 plot(x,y2,'-k')
 % beautify
 set(gca, 'Xdir', 'reverse')
-% set(gca, 'XScale', 'log')
 set(gca,'YAxisLocation','right')
-% miny=min(base,min(samples.elv_above_base));
-% miny=min(y2(climatecurves.age<max(samples.C)));
-miny=min(y2);
-maxy=max(max(y2),max(samples.site_elv))+100;
-% xlim([min(climatecurves.age) max(x(y2>miny))])
-% xlim([min(diff(climatecurves.age))*10 1e7])
-xlim([0 max(samples.C)*1.2]/agescaling)
+miny=min(min(y1(climatecurves.age<100e3)),min(samples.site_elv));
+maxy=max(max(y3),max(samples.site_elv))+100;
+xlim([0 max(30e3,max(samples.C))*1.2]/agescaling)
 ylim([miny maxy])
-% % make XTicks nicer [if agescaling==1 and set(gca, 'XScale', 'log')]
-% xticks=get(gca,'XTick');
-% tl=get(gca,'XTickLabel');
-% for nt=1:numel(xticks)
-%     if xticks(nt)<1e3
-%         tl{nt}=[num2str(xticks(nt)) ' a'];
-%     elseif xticks(nt)<1e6
-%         tl{nt}=[num2str(xticks(nt)/1e3) ' ka'];
-%     else
-%         tl{nt}=[num2str(xticks(nt)/1e6) ' Ma'];
-%     end
-% endset(gca, 'XScale', 'log')
-% set(gca,'XTickLabelMode','manual','XTickLabel',tl)  % comment for testint
 ylabel('Elevation (m)')
 xlabel('Age (a)')
 title(['Elevation of the ice-surface (' climatecurves.ver ')'])
