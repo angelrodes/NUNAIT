@@ -5,6 +5,11 @@ The NUNAIT calculator is an easy-to-use MATLAB/Octave tool that constrains param
 
 *Ángel Rodés, 2021*
 
+## Graphical description of the model
+
+![NUNAIT_cartoon](https://user-images.githubusercontent.com/53089531/129214127-8459cb71-7675-4239-bc63-5f1075c46a7f.png)
+
+
 ## Preprint
 
 A description of the calculator is available at:
