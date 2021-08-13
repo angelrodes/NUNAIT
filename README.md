@@ -1,6 +1,8 @@
 # NUNAIT
 Supporting information for the manuscript *"The NUNAtak Ice Thinning (NUNAIT) calculator for cosmonuclide elevation profiles."* submitted to *Geosciences*.
 
+![NUNAIT_logo](https://user-images.githubusercontent.com/53089531/129394469-bd579e0d-14f3-4eeb-98ef-528a92301586.png)
+
 The NUNAIT calculator is an easy-to-use MATLAB/Octave tool that constrains parameters describing the geological history of a nunatak from a set of surface exposure ages.
 
 *Ángel Rodés, 2021*
