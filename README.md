@@ -5,7 +5,8 @@ Supporting information for the manuscript *"The NUNAtak Ice Thinning (NUNAIT) ca
 
 The NUNAIT calculator is an easy-to-use MATLAB/Octave tool that constrains parameters describing the geological history of a nunatak from a set of surface exposure ages.
 
-*Ángel Rodés, 2021*
+*Ángel Rodés, 2021*\
+[angelrodes.com](http://www.angelrodes.com/)
 
 ## Graphical description of the model
 
