@@ -29,4 +29,4 @@ There are four ways of fitting the model to the data:
 
 A description of the calculator is available at:
 
-**Rodés, Á.** (2021) "The NUNAtak Ice Thinning (NUNAIT) Calculator for Cosmonuclide Elevation Profiles" [*Geosciences* 11, no. 9: 362.](https://www.mdpi.com/2076-3263/11/9/362) doi: 10.3390/geosciences11090362
+**Rodés, Á.** (2021) "The NUNAtak Ice Thinning (NUNAIT) Calculator for Cosmonuclide Elevation Profiles" *Geosciences* 11, no. 9: 362. doi:[10.3390/geosciences11090362](https://doi.org/10.3390/geosciences11090362 )
