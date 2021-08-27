@@ -2,7 +2,8 @@
 
 ![NUNAIT_logo](https://user-images.githubusercontent.com/53089531/129394469-bd579e0d-14f3-4eeb-98ef-528a92301586.png)
 
->Supporting information for the manuscript *"The NUNAtak Ice Thinning (NUNAIT) calculator for cosmonuclide elevation profiles."* [published in *Geosciences*](https://www.mdpi.com/2076-3263/11/9/362).
+>Supplementary material of \
+>Rodés, Á. (2021) The NUNAtak Ice Thinning (NUNAIT) Calculator for Cosmonuclide Elevation Profiles. *Geosciences* 11, no. 9: 362. doi:[10.3390/geosciences11090362](https://doi.org/10.3390/geosciences11090362 )
 
 The NUNAIT calculator is an easy-to-use MATLAB/Octave tool that constrains parameters describing the geological history of a nunatak from a set of surface exposure ages.
 
@@ -17,7 +18,7 @@ The NUNAIT model generates vertical profiles of apparent exposure ages based on 
 
 ## Input data
 
-Site data have to be inputted in comma separated files ```.csv```. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
+Save your data in comma separated files ```.csv```, one for each nunatak or group of nunatks. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
 
 * ```name```: Sample name without spaces or symbols.
 * ```lat```: Latitude used to calculate the muon contributions ({decimal degrees}).
@@ -31,7 +32,7 @@ Site data have to be inputted in comma separated files ```.csv```. Some examples
 
 ## Fitting paramenters
 
-The program asks the user to set maximum and minimum values for the parameters to be fitted:
+When running ```START.m``` in MATLAB or Octave (e.g. ```octave --persist START.m```) and choosing ```Run simulation```, the program asks the user to set maximum and minimum values for the parameters to be fitted:
 
 ![image](https://user-images.githubusercontent.com/53089531/131124678-7670b0f6-deef-4c93-9729-c8ee10168486.png)
 
@@ -45,6 +46,15 @@ There are four ways of fitting the model to the data:
 * ```3```: no fitting, used for testing purposes. E.g. generating expected profiles before sampling.
 
 ![fit types](https://user-images.githubusercontent.com/53089531/129227177-fae66375-82c1-48d5-9581-db72d63c778e.png)
+
+## Output
+
+After running the models, the NUNAIT calculator produces text and graphical outputs, including probability plots for each paramenter, glacial model, and apparent age profiles:
+
+![image](https://user-images.githubusercontent.com/53089531/131139758-52c595c0-8483-45e5-862f-532c752dd963.png)
+
+The text output in the commeand window is tabulated, so it can be easily copied to any spreadsheet.
+
 
 ## Cite
 
