@@ -19,13 +19,13 @@ The NUNAIT model generates vertical profiles of apparent exposure ages based on 
 
 Site data have to be inputted in comma separated files ```.csv```. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored by the program): 
 
-* name: Sample name without spaces or symbols.
-* lat: Latitude used to calculate the muon contributions ({decimal degrees}).
-* site\_elv: Elevation of the sample above sea level (m).
-* isotope: Mass of the cosmogenic isotope. Currently accepting 3, 10, 14, 21, 26, and 36 for 3He, 10Be, 14C, 21Ne, 26Al, and 36Cl, respectively.
-* base_level: Current elevation of the glacier surface above sea level at the sampling site (m). This is used to calculate the ice position through time.
-* apparent_years: Apparent surface exposure age calculated with any cosmogenic calculator, any scaling scheme, and any production rate reference.
-* dapparent_years: External uncertainty of the previous age.
+* ```name```: Sample name without spaces or symbols.
+* ```lat```: Latitude used to calculate the muon contributions ({decimal degrees}).
+* ```site_elv```: Elevation of the sample above sea level (m).
+* ```isotope```: Mass of the cosmogenic isotope. Currently accepting 3, 10, 14, 21, 26, and 36 for 3He, 10Be, 14C, 21Ne, 26Al, and 36Cl, respectively.
+* ```base_level```: Current elevation of the glacier surface above sea level at the sampling site (m). This is used to calculate the ice position through time.
+* ```apparent_years```: Apparent surface exposure age calculated with any cosmogenic calculator, any scaling scheme, and any production rate reference.
+* ```dapparent_years```: External uncertainty of the previous age.
 
 ![image](https://user-images.githubusercontent.com/53089531/131122210-d86e1034-834f-433a-b599-4ffc4081a194.png)
 
