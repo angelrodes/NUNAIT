@@ -15,6 +15,27 @@ The NUNAIT model generates vertical profiles of apparent exposure ages based on 
 
 ![NUNAIT_cartoon](https://user-images.githubusercontent.com/53089531/129214127-8459cb71-7675-4239-bc63-5f1075c46a7f.png)
 
+## Input data
+
+Site data have to be inputted in comma separated files ```.csv```. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored by the program): 
+
+* name: Sample name without spaces or symbols.
+* lat: Latitude used to calculate the muon contributions ({decimal degrees}).
+* site\_elv: Elevation of the sample above sea level (m).
+* isotope: Mass of the cosmogenic isotope. Currently accepting 3, 10, 14, 21, 26, and 36 for 3He, 10Be, 14C, 21Ne, 26Al, and 36Cl, respectively.
+* base_level: Current elevation of the glacier surface above sea level at the sampling site (m). This is used to calculate the ice position through time.
+* apparent_years: Apparent surface exposure age calculated with any cosmogenic calculator, any scaling scheme, and~any production rate reference.
+* dapparent_years: External uncertainty of the previous age.
+
+![image](https://user-images.githubusercontent.com/53089531/131122210-d86e1034-834f-433a-b599-4ffc4081a194.png)
+
+## Fitting paramenters
+
+The program asks the user to set maximum and minimum values for the parameters to be fitted:
+
+![image](https://user-images.githubusercontent.com/53089531/131124678-7670b0f6-deef-4c93-9729-c8ee10168486.png)
+
+
 ## Fitting types
 
 There are four ways of fitting the model to the data: 
