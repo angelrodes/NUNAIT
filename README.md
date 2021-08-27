@@ -7,7 +7,7 @@
 The NUNAIT calculator is an easy-to-use MATLAB/Octave tool that constrains parameters describing the geological history of a nunatak from a set of surface exposure ages.
 
 *Ángel Rodés, 2021*\
-[angelrodes.com](http://www.angelrodes.com/)
+[**angelrodes.com**](http://www.angelrodes.com/)
 
 ## Graphical description of the model
 
@@ -17,7 +17,7 @@ The NUNAIT model generates vertical profiles of apparent exposure ages based on 
 
 ## Input data
 
-Site data have to be inputted in comma separated files ```.csv```. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored by the program): 
+Site data have to be inputted in comma separated files ```.csv```. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
 
 * ```name```: Sample name without spaces or symbols.
 * ```lat```: Latitude used to calculate the muon contributions ({decimal degrees}).
