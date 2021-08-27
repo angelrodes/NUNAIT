@@ -18,7 +18,7 @@ The NUNAIT model generates vertical profiles of apparent exposure ages based on 
 
 ## Input data
 
-Save your data in comma separated files ```.csv```, one for each nunatak or group of nunatks. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
+Save your data in comma separated files ```.csv```, one for each nunatak or group of nunataks. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
 
 * ```name```: Sample name without spaces or symbols.
 * ```lat```: Latitude used to calculate the muon contributions ({decimal degrees}).
@@ -30,7 +30,7 @@ Save your data in comma separated files ```.csv```, one for each nunatak or grou
 
 ![image](https://user-images.githubusercontent.com/53089531/131122210-d86e1034-834f-433a-b599-4ffc4081a194.png)
 
-## Fitting paramenters
+## Fitting parameters
 
 When running ```START.m``` in MATLAB or Octave (e.g. ```octave --persist START.m```) and choosing ```Run simulation```, the program asks the user to set maximum and minimum values for the parameters to be fitted:
 
@@ -49,11 +49,11 @@ There are four ways of fitting the model to the data:
 
 ## Output
 
-After running the models, the NUNAIT calculator produces text and graphical outputs, including probability plots for each paramenter, glacial model, and apparent age profiles:
+After running the models, the NUNAIT calculator produces text and graphical outputs, including probability plots for each parameter, glacier elevation model, and apparent age profiles:
 
 ![image](https://user-images.githubusercontent.com/53089531/131139758-52c595c0-8483-45e5-862f-532c752dd963.png)
 
-The text output in the commeand window is tabulated, so it can be easily copied to any spreadsheet.
+The text output in the command window is tabulated, so it can be easily copied to any spreadsheet.
 
 
 ## Cite
