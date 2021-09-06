@@ -58,6 +58,6 @@ The text output in the command window is tabulated, so it can be easily copied t
 
 ## Cite
 
-A description of the calculator is available at:
+<!-- A description of the calculator is available at: -->
 
 **Rodés, Á.** (2021) "The NUNAtak Ice Thinning (NUNAIT) Calculator for Cosmonuclide Elevation Profiles" *Geosciences* 11, no. 9: 362. doi:[10.3390/geosciences11090362](https://doi.org/10.3390/geosciences11090362 )
