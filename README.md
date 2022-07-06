@@ -18,7 +18,7 @@ The NUNAIT model generates vertical profiles of apparent exposure ages based on 
 
 ## Input data
 
-Save your data in comma separated files ```.csv```, one for each nunatak or group of nunataks. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
+Save your data in comma-separated-values files ```.csv```, one for each nunatak or group of nunataks. Some examples of input files are included in the folder "Examples". The input file contains the following headers (first line, ignored in NUNAIT): 
 
 * ```name```: Sample name without spaces or symbols.
 * ```lat```: Latitude used to calculate the muon contributions ({decimal degrees}).
