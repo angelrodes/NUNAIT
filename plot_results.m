@@ -137,6 +137,26 @@ for n=find(onesigma)'
     y1=min(y1,yi);
     y3=max(y3,yi);
 end
+
+% % calculate and diplay deglaciation ages (uncomment if needed)
+% disp('Deglaciation age')   
+% disp(['Sample' char(9)...
+%     'Z-Z0' char(9)...
+%     'Apparent age' char(9)...
+%     'Deglaciation age range'])   
+% for n=1:numel(samples.lat)
+%     z_sample=samples.elv_above_base(n);
+%     sel1=find(y1>z_sample,1,'first');
+%     sel3=find(y3>z_sample,1,'first');
+%     string=[samples.name{n} char(9)...
+%         num2str(samples.elv_above_base(n)) ' m' char(9)...
+%         num2str(samples.apparent_years(n)) ' ' char(177) ' '  num2str(samples.dapparent_years(n)) ' ('  num2str(samples.isotope(n)) ')' char(9)...
+%         num2str(round(x(sel3)/2+x(sel3-1)/2)) ' - ' num2str(round(x(sel1)/2+x(sel1-1)/2))  char(9)
+%         ];
+%     disp(string)
+% end
+
+
 toc
 %close(h)
 
@@ -229,6 +249,9 @@ for nuc=uniquenuclides
     grid on
     
 end
+
+%% Uncomment to show the evolution of the sampled surfaces
+% plot_landscape_evolution(filename)
 
 end % end function
 
