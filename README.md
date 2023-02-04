@@ -61,3 +61,7 @@ The text output in the command window is tabulated, so it can be easily copied t
 <!-- A description of the calculator is available at: -->
 
 **Rodés, Á.** (2021) "The NUNAtak Ice Thinning (NUNAIT) Calculator for Cosmonuclide Elevation Profiles" *Geosciences* 11, no. 9: 362. doi:[10.3390/geosciences11090362](https://doi.org/10.3390/geosciences11090362 )
+
+<!-- AI summary:
+The NUNAIT calculator is a MATLAB/Octave tool that constrains parameters describing the geological history of a nunatak from a set of surface exposure ages. It generates vertical profiles of apparent exposure ages based on given parameter values, such as erosion rates, uplift rate, and current and maximum ice elevations. The calculator produces text and graphical outputs, including probability plots for each parameter, glacier elevation model, and apparent age profiles. It also offers four ways of fitting the model to the data: normal fitting, minimum apparent ages, maximum apparent ages, and no fitting. This calculator is a useful tool for researchers studying the geological history of nunataks and the effects of climate change on them.
+-->
