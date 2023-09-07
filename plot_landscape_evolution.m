@@ -1,8 +1,13 @@
-clear
-close all hidden
+function [  ] = plot_landscape_evolution(filename)
+%% Calculates the evolution of the elevation of the sampling surfaces 
+%% according to the models showing minimum and maximum glacial erosion 
+%% rates (extreme scenarios).
+%
+%% Angel Rodes, 2022
+%% www.angelrodes.com
 
 %% Load result file
-filename=[pwd '/Examples/NEG_samples_all_20220816a_sampledata_model.mat']
+% filename='/home/angel/Desktop/Angel-work_2022/Roberts_Lane_2022/NUNAIT-main_NEG_20220816/Examples/NEG_samples_all_20220816a_sampledata_model.mat'
 load(filename)
 
 %% Select models with minimum and maximum glacial erosion rates
@@ -86,6 +91,7 @@ for base_elv=unique(samples.base_level)'
         ylabel('Elevation (m)')
         xlabel('Age (a)')
         box on
+end
         grid on
         
     end
