@@ -1,13 +1,8 @@
-function [  ] = plot_landscape_evolution(filename)
-%% Calculates the evolution of the elevation of the sampling surfaces 
-%% according to the models showing minimum and maximum glacial erosion 
-%% rates (extreme scenarios).
-%
-%% Angel Rodes, 2022
-%% www.angelrodes.com
+clear
+close all hidden
 
 %% Load result file
-% filename='/home/angel/Desktop/Angel-work_2022/Roberts_Lane_2022/NUNAIT-main_NEG_20220816/Examples/NEG_samples_all_20220816a_sampledata_model.mat'
+filename=[pwd '/Examples/NEG_samples_all_20220816a_sampledata_model.mat']
 load(filename)
 
 %% Select models with minimum and maximum glacial erosion rates
@@ -17,6 +12,17 @@ selected_models=[...
 
 for base_elv=unique(samples.base_level)'
     selected_samples=base_elv==samples.base_level;
+    % remove repeated samples
+    names=[];
+    for sample_index=find(selected_samples)'
+        if ~isempty(names)
+            if sum(strcmp(names,samples.name(sample_index)))>0
+                selected_samples(sample_index)=0;
+            end
+        end
+        names=[names;samples.name(sample_index)];
+    end
+
     
     for model_index=selected_models
         figure('units','normalized','outerposition',[0 0 1 1],'Name','Surfaces')
@@ -30,6 +36,17 @@ for base_elv=unique(samples.base_level)'
         plot(T,ICE_ELV,'-b')
         plot([0,0],[0,0],'-k')
         legend('Ice surface','Sampled surfaces','AutoUpdate','off')
+
+        % calculate label_elv
+        label_elv=0.*samples.site_elv(selected_samples);
+        [~,ind]=sort(samples.site_elv(selected_samples));
+        unsorted = 1:max(ind);
+        order=0.*unsorted;
+        order(ind) = unsorted;
+        label_elevations=interp1([min(order),max(order)],...
+            [min(samples.site_elv(selected_samples)),max(samples.site_elv(selected_samples))],...
+            order);
+        label_elv(selected_samples)=label_elevations+20;
         for sample_index=find(selected_samples)'
             ELV=0.*T;
             ELV(1)=samples.site_elv(sample_index);
@@ -44,17 +61,25 @@ for base_elv=unique(samples.base_level)'
                 % elevations
                 ELV(n)=Zi/100+ELV(n-1);
             end
-            % Plot sample trajectory
-            plot(T,ELV,'-k')
-            text(T(1),ELV(1),samples.name{sample_index})
-            text(1e3,ELV(1),samples.name{sample_index},...
+            % plot label
+%             text(T(1),ELV(1),samples.name{sample_index})
+%             text(1e3,ELV(1),samples.name{sample_index},...
+%                 'HorizontalAlignment', 'right',...
+%                 'VerticalAlignment', 'bottom')
+            text(1.3e3,label_elv(sample_index),samples.name{sample_index},...
                 'HorizontalAlignment', 'right',...
-                'VerticalAlignment', 'bottom')
+                'VerticalAlignment', 'middle',...
+                'Color','k')
+            plot([1.3e3,1e3],[label_elv(sample_index),ELV(1)],':','Color','k')
+
+                        % Plot sample trajectory
+            plot(T,ELV,'-k')
             
         end
 %         plot(T,ICE_ELV,'-b')
         set(gca, 'Xdir', 'reverse')
         set(gca,'YAxisLocation','right')
+        %         xlim([0 5e5])
         set(gca, 'XScale', 'log')
         xlim([1e3 1e7])
         ylim([0 max(samples.site_elv)*1.5])
@@ -64,6 +89,4 @@ for base_elv=unique(samples.base_level)'
         grid on
         
     end
-end
-
 end
