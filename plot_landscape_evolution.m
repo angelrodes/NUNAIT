@@ -7,7 +7,6 @@ function [  ] = plot_landscape_evolution(filename)
 %% www.angelrodes.com
 
 %% Load result file
-% filename='/home/angel/Desktop/Angel-work_2022/Roberts_Lane_2022/NUNAIT-main_NEG_20220816/Examples/NEG_samples_all_20220816a_sampledata_model.mat'
 load(filename)
 
 %% Select models with minimum and maximum glacial erosion rates
